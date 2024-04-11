@@ -11,8 +11,8 @@ public class Exo3 {
        System.out.println("The list: "+list);
         System.out.println("Sum = "+listSum(list));
         System.out.println("Average = "+listAverage(list));
-        listoddonly(list);
-        System.out.println("Only odd in list = "+list);
+list = listoddonly(list);
+    System.out.println("Only odd in list = "+list);
     }
     public static int listSum(List<Integer> list) {
         int listSum = 0;
@@ -28,7 +28,7 @@ public class Exo3 {
         }
         return listAverage/list.size();
     }
-    public static int listoddonly(List<Integer> list) {
+    public static List<Integer> listoddonly(List<Integer> list) {
         Iterator<Integer> it = list.iterator();
         while (it.hasNext()) {
             if (it.next() % 2==0){
@@ -36,7 +36,8 @@ public class Exo3 {
             }
 
         }
-        return listoddonly(list);
+        return list;
+
     }
 
 }
